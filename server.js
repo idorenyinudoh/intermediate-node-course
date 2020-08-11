@@ -1,6 +1,9 @@
 const express= require('express');
 const mongoose= require('mongoose');
 const bodyParser= require('body-parser');
+const User = require('./models/User');
+// mongoose.createConnection('mongodb://localhost/userData',{useUnifiedTopology: true, useNewUrlParser: true});
+mongoose.connect('mongodb://localhost/userData',{useUnifiedTopology: true, useNewUrlParser: true});
 const port=8000;
 const app= express();
 
